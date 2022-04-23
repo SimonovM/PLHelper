@@ -1,3 +1,5 @@
+#: include ../interfaces/ui/rounded_button.kv
+
 MainScreen:
 
 <MainScreen>:
@@ -23,19 +25,10 @@ MainScreen:
         RoundedButton:
             text: "Выбор языка"
             size: 100, 50
+            font_size: 26
+            on_press: root.manager.current = "lang_type"
         RoundedButton:
             text: "Выход"
             size: 100, 50
+            font_size: 26
             on_press: exit(0)
-
-
-<RoundedButton@Button>
-	background_color: (0,0,0,0)
-	background_normal: ''
-	canvas.before:
-		Color:
-			rgba: (48/255,84/255,150/255,1)
-		RoundedRectangle:
-			size: self.size
-			pos: self.pos
-			radius: [40]
