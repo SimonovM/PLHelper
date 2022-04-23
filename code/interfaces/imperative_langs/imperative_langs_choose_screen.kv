@@ -1,6 +1,6 @@
-LangTypeScreen:
+ImperativeLangsChooseScreen:
 
-<LangTypeScreen>:
+<ImperativeLangsChooseScreen>:
     canvas.before:
         Color:
             rgba: 1, 1, 1, 1
@@ -13,25 +13,22 @@ LangTypeScreen:
         size: 50, 50
         size_hint: None, None
         pos: (0, self.parent.size[1] - 50)
-        on_press: root.manager.current = "main"
+        on_press: root.manager.current = "lang_type"
 
     BoxLayout:
         orientation: "vertical"
         background_color: "blue"
         spacing: 10
         pos_hint: {"center_x": .5, "center_y": .5}
-        size_hint: 0.6, 0.6
+        size_hint: 0.4, 0.4
 
-        Label:
-            text: "Основная парадигма языка:"
-            color: "black"
-            font_size: 36
-            on_press:
         RoundedButton:
-            text: "Функциональный"
+            text: "C#"
             font_size: 26
-            on_press: root.manager.current = "func"
+            on_press: root.manager.current = "c#"
         RoundedButton:
-            text: "Императивный"
+            text: "Java"
             font_size: 26
-            on_press: root.manager.current = "imperative"
+        RoundedButton:
+            text: "Python"
+            font_size: 26
