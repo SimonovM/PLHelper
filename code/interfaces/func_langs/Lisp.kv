@@ -1,0 +1,36 @@
+LispLangScreen:
+
+<LispLangScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RoundedButton:
+        text: "<-"
+        size: 50, 50
+        size_hint: None, None
+        pos: (0, self.parent.size[1] - 50)
+        on_press: root.manager.current = "func"
+
+    BoxLayout:
+        orientation: "vertical"
+        background_color: "blue"
+        spacing: 10
+        pos_hint: {"center_x": .5, "center_y": .7}
+        size_hint: 0.9, 0.8
+
+        Label:
+            text: "Lisp"
+            font_size: 60
+            bold: True
+            color: "black"
+
+        Label:
+            color: "black"
+            size_hint: 1, .8
+            height: self.texture_size[1]
+            text_size: self.width, None
+            text: "Лисп (LISP, от англ. LISt Processing language — «язык обработки списков») — семейство языков программирования, программы и данные в которых представляются системами линейных списков символов. Лисп был создан Джоном Маккарти для работ по искусственному интеллекту и до сих пор остаётся одним из основных инструментальных средств в данной области. Применяется он и как средство обычного промышленного программирования, от встроенных скриптов до веб-приложений массового использования, хотя популярным его назвать нельзя. Это один из старейших (наряду с Фортраном и Коболом) используемых по сей день высокоуровневых языков программирования, а также первый из сохранившихся в использовании языков, использующих автоматическое управление памятью и сборку мусора."

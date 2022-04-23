@@ -1,0 +1,36 @@
+FSharpLangScreen:
+
+<FSharpLangScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RoundedButton:
+        text: "<-"
+        size: 50, 50
+        size_hint: None, None
+        pos: (0, self.parent.size[1] - 50)
+        on_press: root.manager.current = "func"
+
+    BoxLayout:
+        orientation: "vertical"
+        background_color: "blue"
+        spacing: 10
+        pos_hint: {"center_x": .5, "center_y": .7}
+        size_hint: 0.9, 0.8
+
+        Label:
+            text: "F#"
+            font_size: 60
+            bold: True
+            color: "black"
+
+        Label:
+            color: "black"
+            size_hint: 1, .8
+            height: self.texture_size[1]
+            text_size: self.width, None
+            text: "F# — мультипарадигмальный язык программирования из семейства языков .NET, поддерживающий функциональное программирование в дополнение к императивному (процедурному) и объектно-ориентированному программированию. Структура F# во многом схожа со структурой OCaml с той лишь разницей, что F# реализован поверх библиотек и среды исполнения .NET. Язык был разработан Доном Саймом в Microsoft Research в Кембридже, в настоящее время его разработку ведёт Microsoft Developer Division. F# достаточно тесно интегрируется со средой разработки Visual Studio и включён в поставку Visual Studio 2010/2012/2013/2015/2017/2019; разработаны также компиляторы для Mac и Linux."

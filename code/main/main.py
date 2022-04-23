@@ -3,9 +3,12 @@ from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, FadeTransition
 
 from code.screens.c_sharp_lang_screen import CSharpLangScreen
+from code.screens.f_sharp_lang_screen import FSharpLangScreen
 from code.screens.func_langs_choose_screen import FuncLangsChooseScreen
+from code.screens.haskell_lang_screen import HaskellLangScreen
 from code.screens.java_lang_screen import JavaLangScreen
 from code.screens.lang_type_screen import LangTypeScreen
+from code.screens.lisp_lang_screen import LispLangScreen
 from code.screens.main_screen import MainScreen
 from code.screens.imperative_langs_choose_screen import ImperativeLangsChooseScreen
 from code.screens.python_lang_screen import PythonLangScreen
@@ -18,6 +21,9 @@ Builder.load_file("../interfaces/func_langs/func_langs_choose_screen.kv")
 Builder.load_file("../interfaces/imperative_langs/C#.kv")
 Builder.load_file("../interfaces/imperative_langs/Java.kv")
 Builder.load_file("../interfaces/imperative_langs/Python.kv")
+Builder.load_file("../interfaces/func_langs/F#.kv")
+Builder.load_file("../interfaces/func_langs/Haskell.kv")
+Builder.load_file("../interfaces/func_langs/Lisp.kv")
 
 
 class PLHelper(App):
@@ -35,6 +41,9 @@ class PLHelper(App):
         manager.add_widget(CSharpLangScreen(name="c#"))
         manager.add_widget(JavaLangScreen(name="java"))
         manager.add_widget(PythonLangScreen(name="python"))
+        manager.add_widget(FSharpLangScreen(name="f#"))
+        manager.add_widget(HaskellLangScreen(name="haskell"))
+        manager.add_widget(LispLangScreen(name="lisp"))
         return manager
 
 
