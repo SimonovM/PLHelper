@@ -1,0 +1,36 @@
+JavaLangScreen:
+
+<JavaLangScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RoundedButton:
+        text: "<-"
+        size: 50, 50
+        size_hint: None, None
+        pos: (0, self.parent.size[1] - 50)
+        on_press: root.manager.current = "imperative"
+
+    BoxLayout:
+        orientation: "vertical"
+        background_color: "blue"
+        spacing: 10
+        pos_hint: {"center_x": .5, "center_y": .7}
+        size_hint: 0.9, 0.8
+
+        Label:
+            text: "Java"
+            font_size: 60
+            bold: True
+            color: "black"
+
+        Label:
+            color: "black"
+            size_hint: 1, .8
+            height: self.texture_size[1]
+            text_size: self.width, None
+            text: "Java - строго типизированный объектно-ориентированный язык программирования общего назначения, разработанный компанией Sun Microsystems (в последующем приобретённой компанией Oracle). Разработка ведётся сообществом, организованным через Java Community Process; язык и основные реализующие его технологии распространяются по лицензии GPL. Права на торговую марку принадлежат корпорации Oracle. Приложения Java обычно транслируются в специальный байт-код, поэтому они могут работать на любой компьютерной архитектуре, для которой существует реализация виртуальной Java-машины. Дата официального выпуска — 23 мая 1995 года. Занимает высокие места в рейтингах популярности языков программирования (2-е место в рейтингах IEEE Spectrum (2020) и TIOBE (2021))."
