@@ -1,3 +1,5 @@
+#:import sys sys
+
 MainScreen:
 
 <MainScreen>:
@@ -27,4 +29,4 @@ MainScreen:
         RoundedButton:
             text: "Выход"
             font_size: 26
-            on_press: exit(0)
+            on_press: sys.exit(0)
