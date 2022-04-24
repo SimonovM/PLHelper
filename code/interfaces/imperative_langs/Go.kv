@@ -1,0 +1,36 @@
+GoLangScreen:
+
+<GoLangScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    RoundedButton:
+        text: "<-"
+        size: 50, 50
+        size_hint: None, None
+        pos: (0, self.parent.size[1] - 50)
+        on_press: root.manager.current = "imperative"
+
+    BoxLayout:
+        orientation: "vertical"
+        background_color: "blue"
+        spacing: 10
+        pos_hint: {"center_x": .5, "center_y": .7}
+        size_hint: 0.9, 0.8
+
+        Label:
+            text: "Go"
+            font_size: 60
+            bold: True
+            color: "black"
+
+        Label:
+            color: "black"
+            size_hint: 1, .8
+            height: self.texture_size[1]
+            text_size: self.width, None
+            text: "Go — компилируемый многопоточный язык программирования, разработанный внутри компании Google. Разработка Go началась в сентябре 2007 года, его непосредственным проектированием занимались Роберт Гризмер, Роб Пайк и Кен Томпсон, занимавшиеся до этого проектом разработки операционной системы Inferno. Официально язык был представлен в ноябре 2009 года. На данный момент поддержка официального компилятора, разрабатываемого создателями языка, осуществляется для операционных систем FreeBSD, OpenBSD, Linux, macOS, Windows, DragonFly BSD, Plan 9, Solaris, Android, AIX. Также Go поддерживается набором компиляторов gcc, существует несколько независимых реализаций. Ведётся разработка второй версии языка."
