@@ -33,6 +33,7 @@ Builder.load_file("../interfaces/imperative_langs/Go.kv")
 Builder.load_file("../interfaces/func_langs/Erlang.kv")
 Builder.load_file("../interfaces/func_langs/Scala.kv")
 
+зку
 class PLHelper(App):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
