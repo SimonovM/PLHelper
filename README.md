@@ -8,6 +8,10 @@ PLHelper - Programming Languages Helper, небольшой справочник
 - Haskell
 - F#
 - Lisp
+- Go
+- C++
+- Scala
+- Erlang
 
 ## Инструкция по установке:
 - ### Первый вариант
